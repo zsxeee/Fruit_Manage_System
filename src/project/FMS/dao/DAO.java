@@ -98,4 +98,33 @@ public class DAO {
             return -1;
         }
     }
+
+    public PreparedStatement preSet(String sql) throws Throwable {
+        if(this.conn()){
+            try{
+                return conn.prepareStatement(sql);
+            }catch (Throwable e){
+                this.disconn();
+                throw new Throwable("Database preOperate Error!",e);
+            }
+        }else {
+            return null;
+        }
+    }
+
+    public int runSet(PreparedStatement set){
+        if(this.conn()){
+            try{
+                return set.executeUpdate();
+            }catch (Throwable e){
+                System.out.println("Database Operate Error!");
+                e.printStackTrace();
+                return -1;
+            }finally {
+                this.disconn();
+            }
+        }else {
+            return -1;
+        }
+    }
 }
