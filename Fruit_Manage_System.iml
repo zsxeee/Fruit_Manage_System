@@ -11,7 +11,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="mysql-connector-java-8.0.11" level="project" />
     <orderEntry type="library" scope="TEST" name="JUnit4" level="project" />
-    <orderEntry type="library" name="SwingSets3(BeautyEyeLNFDemo)" level="project" />
     <orderEntry type="library" name="jiconfont-1.0.0" level="project" />
+    <orderEntry type="library" name="beautyeye_lnf" level="project" />
   </component>
 </module>

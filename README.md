@@ -5,6 +5,11 @@ This temp project is for study task.
 - Java 1.8
 - MySQL 5.5
 
+## Dependencies
+- Mysql Connector
+- JIconfont Swing (font awesome)
+- BeautyEye
+
 ## Database config
 - Database
 

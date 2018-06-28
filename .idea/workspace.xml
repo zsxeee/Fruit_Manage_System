@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="209dd951-9edc-4e01-a211-0c4f3ff9305b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/FMS/window/InfoWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/FMS/window/InventoryWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fruit_Manage_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Fruit_Manage_System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InventoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/info/InfoWindow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/inventory/InventoryWindow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/welcome/WelcomeWindow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/FMS/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/info/InfoWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/inventory/InventoryWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/welcome/WelcomeWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/project/FMS/window/InventoryWindow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-57">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#652#653#0" expanded="true" />
@@ -98,23 +84,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomeWindow.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WelcomeWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
-              <caret line="57" column="12" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="21" />
+              <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DAOTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -212,7 +189,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="542" />
     <option name="y" value="-9" />
     <option name="width" value="980" />
@@ -232,6 +209,11 @@
             <path>
               <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
@@ -308,7 +290,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jiconfont-font_awesome-4.7.0.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/beautyeye_lnf.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -344,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DAOTest.testDao">
+  <component name="RunManager" selected="Application.WelcomeWindow">
     <configuration name="WelcomeWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project.FMS.WelcomeWindow" />
       <module name="Fruit_Manage_System" />
@@ -426,8 +408,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DAOTest.testDao" />
         <item itemvalue="Application.WelcomeWindow" />
+        <item itemvalue="JUnit.DAOTest.testDao" />
       </list>
     </recent_temporary>
   </component>
@@ -449,17 +431,11 @@
       <workItem from="1530065378331" duration="52000" />
       <workItem from="1530065460914" duration="38056000" />
       <workItem from="1530166721971" duration="1487000" />
-      <workItem from="1530168251538" duration="8180000" />
+      <workItem from="1530168251538" duration="9217000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DAOTest_testDao - 2018.06.26 at 23h 51m 10s.xml">
-      <configuration name="DAOTest.testDao" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DAOTest_testDao - 2018.06.26 at 23h 51m 14s.xml">
-      <configuration name="DAOTest.testDao" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DAOTest_testDao - 2018.06.26 at 23h 51m 23s.xml">
       <configuration name="DAOTest.testDao" configurationId="JUnit" />
     </history-entry>
@@ -484,12 +460,18 @@
     <history-entry file="DAOTest_testDao - 2018.06.27 at 09h 01m 08s.xml">
       <configuration name="DAOTest.testDao" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DAOTest_testDao - 2018.06.28 at 17h 55m 47s.xml">
+      <configuration name="DAOTest.testDao" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DAOTest_testDao - 2018.06.28 at 18h 09m 55s.xml">
+      <configuration name="DAOTest.testDao" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92206000" />
+    <option name="totallyTimeSpent" value="93243000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
@@ -502,11 +484,12 @@
       <window_info anchor="right" id="Maven Projects" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.31400284" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.31400284" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Dependency Viewer" weight="0.32956153" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2969169" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2969169" />
       <window_info anchor="right" id="Database" order="2" weight="0.3297587" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
@@ -630,16 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Fruit_Manage_System.eml" />
     <entry file="file://$PROJECT_DIR$/.project" />
     <entry file="file://$PROJECT_DIR$/.gitattributes" />
@@ -705,6 +678,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -835,7 +811,7 @@
     <entry file="file://$PROJECT_DIR$/src/project/FMS/window/InventoryWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#652#653#0" expanded="true" />
@@ -860,20 +836,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="57" column="12" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="181">
+            <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="228">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -953,7 +939,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jiconfont-1.0.0</last-edited>
+          <last-edited>beautyeye_lnf</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
