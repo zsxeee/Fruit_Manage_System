@@ -4,7 +4,11 @@ import java.io.FileInputStream;
 import java.sql.*;
 import java.util.*;
 
-public class DAO {
+/**
+ * @description Database Access Object
+ * @author zsxeee
+ */
+class DAO {
     private Connection conn;
     private Statement stmt;
     private String driver;
@@ -14,7 +18,7 @@ public class DAO {
 
 
 
-    public DAO() throws Throwable {
+    DAO() throws Throwable {
         try{
             Properties prop = new Properties();
             FileInputStream in = new FileInputStream("database.properties");
@@ -54,7 +58,7 @@ public class DAO {
 
     }
 
-    public List<Object> select(String sql){
+    List<Object> select(String sql){
         List<Object> list = new ArrayList<>();
         if(this.conn()){
             try{
@@ -83,7 +87,7 @@ public class DAO {
         return list;
     }
 
-    public int operate(String sql){
+    int operate(String sql){
         if(this.conn()){
             try{
                 return stmt.executeUpdate(sql);
@@ -99,7 +103,7 @@ public class DAO {
         }
     }
 
-    public PreparedStatement preSet(String sql) throws Throwable {
+    PreparedStatement preSet(String sql) throws Throwable {
         if(this.conn()){
             try{
                 return conn.prepareStatement(sql);
@@ -112,7 +116,7 @@ public class DAO {
         }
     }
 
-    public int runSet(PreparedStatement set){
+    int runSet(PreparedStatement set){
         if(this.conn()){
             try{
                 return set.executeUpdate();

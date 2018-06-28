@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="209dd951-9edc-4e01-a211-0c4f3ff9305b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/FMS/window/InfoWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/FMS/window/InventoryWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fruit_Manage_System.eml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Fruit_Manage_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Fruit_Manage_System.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/example/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/example/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/example/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/example/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Fruit_Manage_System/project/FMS/dao/DAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Fruit_Manage_System/project/FMS/dao/DAOTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InventoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/info/InfoWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/inventory/InventoryWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/welcome/WelcomeWindow.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/FMS/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/FMS/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/example/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/FMS/example/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/example/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/FMS/example/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/FMS/info/InfoWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/FMS/inventory/InventoryWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/FMS/welcome/WelcomeWindow.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,6 +25,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Fruit_Manage_System$WelcomeWindow.ic" NAME="WelcomeWindow Coverage Results" MODIFIED="1530156602431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>project.FMS.welcome.*</FILTER>
+    </SUITE>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -39,46 +45,85 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Fruit Manage System" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DAOTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InventoryWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/project/FMS/window/InventoryWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-57">
+              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/project/FMS/window/InfoWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/project/FMS/window/TableWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-627">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
+                <element signature="e#2370#2371#0" expanded="true" />
+                <element signature="e#3087#3611#0" expanded="true" />
+                <element signature="e#3610#3611#0" expanded="true" />
+                <element signature="e#4162#4470#0" expanded="true" />
+                <element signature="e#4469#4470#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WelcomeWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="57" column="12" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="266">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Inventory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project/FMS/example/Inventory.java">
+      <file leaf-file-name="EditWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/project/FMS/window/EditWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InventoryService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/DAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2299">
-              <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+            <state relative-caret-position="76">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -91,8 +136,8 @@
         <option value="FxmlFile" />
         <option value="Arquillian JUnit Test Class" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,10 +146,22 @@
       <find>QxmenuPojo</find>
       <find>Info</find>
       <find>info</find>
+      <find>Box</find>
+      <find>Horizon</find>
+      <find>scrollPane</find>
+      <find>0</find>
+      <find>add</find>
+      <find>inventory</find>
+      <find>new Color(0, 0, 0)</find>
     </findStrings>
     <replaceStrings>
       <replace>Inventory</replace>
       <replace>inventory</replace>
+      <replace>JPanel</replace>
+      <replace>scrollPane</replace>
+      <replace>table</replace>
+      <replace>info</replace>
+      <replace>Color.BLACK</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -117,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/study/FMS/welcome/WelcomeWindow.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/admin/AdminWindow.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/user/UserWindow.java" />
-        <option value="$PROJECT_DIR$/src/project/FMS/welcome/WelcomeWindow.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/dao/DAOTest.java" />
         <option value="$PROJECT_DIR$/Fruit_Manage_System.iml" />
         <option value="$PROJECT_DIR$/database.properties" />
@@ -126,11 +182,24 @@
         <option value="$PROJECT_DIR$/src/project/FMS/example/InfoEnum.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/dao/TransferExample.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/example/Info.java" />
-        <option value="$PROJECT_DIR$/src/project/FMS/dao/DAO.java" />
-        <option value="$PROJECT_DIR$/src/project/FMS/dao/InfoService.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/example/Inventory.java" />
-        <option value="$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/dao/InfoService.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/util/Iterables.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/inventory/Window.jfd" />
+        <option value="$PROJECT_DIR$/src/project/FMS/dao/DAO.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/inventory/InventoryBean.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/inventory/Inventory.form" />
+        <option value="$PROJECT_DIR$/src/project/FMS/inventory/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/inventory/EditWindow.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/welcome/WelcomeWindow.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/inventory/InventoryWindow.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/info/InfoWindow.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/window/InventoryWindow.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/window/TableWindow.java" />
+        <option value="$PROJECT_DIR$/src/project/FMS/window/InfoWindow.java" />
+        <option value="$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java" />
       </list>
     </option>
   </component>
@@ -144,8 +213,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="700" />
-    <option name="y" value="-10" />
+    <option name="x" value="542" />
+    <option name="y" value="-9" />
     <option name="width" value="980" />
     <option name="height" value="525" />
   </component>
@@ -157,13 +226,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
@@ -175,6 +248,27 @@
               <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="FMS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FMS" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FMS" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fruit_Manage_System" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FMS" type="462c0819:PsiDirectoryNode" />
+              <item name="window" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fruit Manage System" type="b2602c69:ProjectViewProjectNode" />
@@ -195,36 +289,47 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="right" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.11.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jiconfont-font_awesome-4.7.0.0.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="project.FMS.dao" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="project.FMS" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="project.FMS.dao" />
       <recent name="project.FMS.admin" />
       <recent name="project.FMS.user" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -240,13 +345,13 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.DAOTest.testDao">
-    <configuration name="InventoryWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.FMS.inventory.InventoryWindow" />
+    <configuration name="WelcomeWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.FMS.WelcomeWindow" />
       <module name="Fruit_Manage_System" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="project.FMS.inventory.*" />
+          <option name="PATTERN" value="project.FMS.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -316,13 +421,13 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.InventoryWindow" />
+      <item itemvalue="Application.WelcomeWindow" />
       <item itemvalue="JUnit.DAOTest.testDao" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DAOTest.testDao" />
-        <item itemvalue="Application.InventoryWindow" />
+        <item itemvalue="Application.WelcomeWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -340,14 +445,15 @@
       <workItem from="1529980200825" duration="2585000" />
       <workItem from="1529993591150" duration="2453000" />
       <workItem from="1530004898154" duration="11232000" />
-      <workItem from="1530059439661" duration="1127000" />
+      <workItem from="1530059439661" duration="5873000" />
+      <workItem from="1530065378331" duration="52000" />
+      <workItem from="1530065460914" duration="38056000" />
+      <workItem from="1530166721971" duration="1487000" />
+      <workItem from="1530168251538" duration="8180000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DAOTest_testDao - 2018.06.26 at 23h 49m 07s.xml">
-      <configuration name="DAOTest.testDao" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DAOTest_testDao - 2018.06.26 at 23h 51m 10s.xml">
       <configuration name="DAOTest.testDao" configurationId="JUnit" />
     </history-entry>
@@ -375,9 +481,12 @@
     <history-entry file="DAOTest_testDao - 2018.06.27 at 08h 45m 45s.xml">
       <configuration name="DAOTest.testDao" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DAOTest_testDao - 2018.06.27 at 09h 01m 08s.xml">
+      <configuration name="DAOTest.testDao" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39685000" />
+    <option name="totallyTimeSpent" value="92206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -392,18 +501,18 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.33946252" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.31400284" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.32956153" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.28485253" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2969169" />
       <window_info anchor="right" id="Database" order="2" weight="0.3297587" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Favorites" order="7" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39886847" />
       <window_info anchor="bottom" id="Spring" order="5" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -415,10 +524,21 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -432,14 +552,8 @@
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/project/FMS/example/Info.java</url>
-          <line>6</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -447,103 +561,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Fruit_Manage_System.eml" />
-    <entry file="file://$PROJECT_DIR$/.classpath" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/jsse.jar!/com/sun/net/ssl/internal/ssl/Provider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/DAOTest.java" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/welcome/WelcomeWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/inventory/InventoryWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/info/InfoWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/example/Info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/example/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="283">
-            <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fruit_Manage_System.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/DAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -606,27 +623,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/DAOTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/welcome/WelcomeWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/inventory/InventoryWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/info/InfoWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Fruit_Manage_System.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -647,13 +643,6 @@
     <entry file="file://$PROJECT_DIR$/Fruit_Manage_System.eml" />
     <entry file="file://$PROJECT_DIR$/.project" />
     <entry file="file://$PROJECT_DIR$/.gitattributes" />
-    <entry file="file://$PROJECT_DIR$/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/FMS/example/InfoEnum.java" />
     <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/ZJ_BeanToMapUtils.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/Consumer.java">
@@ -698,27 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/example/Info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -726,28 +694,176 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/example/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/util/Iterables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/sun/awt/image/URLImageSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/inventory/Window.jfd" />
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/inventory/Window.java" />
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1577">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/InfoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+        <state relative-caret-position="267">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#348#354#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/DAO.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2299">
-          <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+        <state relative-caret-position="267">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/example/Inventory.java">
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/inventory/InventoryBean.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/awt/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        <state relative-caret-position="431">
+          <caret line="800" column="16" selection-start-line="800" selection-start-column="16" selection-end-line="800" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/inventory/Inventory.form" />
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/inventory/Inventory.java" />
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/example/Info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="2448" column="15" selection-start-line="2448" selection-start-column="15" selection-end-line="2448" selection-end-column="15" />
+          <folding>
+            <element signature="e#84656#84657#0" expanded="true" />
+            <element signature="e#84684#84685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/SwingSets3(BeautyEyeLNFDemo).jar!/org/jb2011/lnf/beautyeye/BeautyEyeLNFHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jiconfont-1.0.0.jar!/jiconfont/IconCode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jiconfont-1.0.0.jar!/jiconfont/IconFont.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jiconfont-1.0.0.jar!/jiconfont/DefaultIconCode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/window/EditWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/window/InfoWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/window/InventoryWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/window/TableWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-627">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+            <element signature="e#2370#2371#0" expanded="true" />
+            <element signature="e#3087#3611#0" expanded="true" />
+            <element signature="e#3610#3611#0" expanded="true" />
+            <element signature="e#4162#4470#0" expanded="true" />
+            <element signature="e#4469#4470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="57" column="12" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -756,18 +872,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -847,7 +953,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mysql-connector-java-8.0.11</last-edited>
+          <last-edited>jiconfont-1.0.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

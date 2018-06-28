@@ -9,7 +9,9 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" exported="" name="mysql-connector-java-8.0.11" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.11" level="project" />
     <orderEntry type="library" scope="TEST" name="JUnit4" level="project" />
+    <orderEntry type="library" name="SwingSets3(BeautyEyeLNFDemo)" level="project" />
+    <orderEntry type="library" name="jiconfont-1.0.0" level="project" />
   </component>
 </module>
