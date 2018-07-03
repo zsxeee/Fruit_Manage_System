@@ -1,7 +1,6 @@
 package project.FMS.dao;
 
 import project.FMS.example.Inventory;
-import project.FMS.example.Inventory;
 
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ public class InventoryService {
     public static List<Inventory> getList() throws Throwable {
         DAO dao = new DAO();
         List result = dao.select("SELECT * FROM `FruitInventory`");
-        List<Inventory> list = new ArrayList<Inventory>();
+        List<Inventory> list = new ArrayList<>();
         result.forEach((Object item)->{
             list.add(new Inventory((Map)item));
         });

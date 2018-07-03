@@ -11,7 +11,7 @@ public class InfoService {
     public static List<Info> getList() throws Throwable {
         DAO dao = new DAO();
         List result = dao.select("SELECT * FROM `FruitInfo`");
-        List<Info> list = new ArrayList<Info>();
+        List<Info> list = new ArrayList<>();
         result.forEach((Object item)->{
             list.add(new Info((Map)item));
         });

@@ -1,7 +1,6 @@
 package project.FMS.dao;
 
 import java.io.FileInputStream;
-import java.net.ConnectException;
 import java.sql.*;
 import java.util.*;
 

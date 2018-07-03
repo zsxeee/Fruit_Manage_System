@@ -41,7 +41,7 @@ public class InfoWindow extends TableWindow {
             return dataList;
         } catch (Throwable throwable) {
             throwable.printStackTrace();
-            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString());
+            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString(), "错误", JOptionPane.ERROR_MESSAGE);
             return null;
         }
     }
@@ -50,7 +50,9 @@ public class InfoWindow extends TableWindow {
     protected Boolean delete(String[] row) {
         Integer id = Integer.parseInt(row[0]);
         try {
-            InfoService.deleteById(id);
+            if (!InfoService.deleteById(id)){
+                JOptionPane.showMessageDialog(this,"删除失败！", "错误", JOptionPane.ERROR_MESSAGE);
+            }
         } catch (Throwable throwable) {
             throwable.printStackTrace();
             return false;

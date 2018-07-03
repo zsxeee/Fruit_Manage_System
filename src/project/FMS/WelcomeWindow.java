@@ -11,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class WelcomeWindow extends JFrame implements ActionListener {
-    private Toolkit toolkit = Toolkit.getDefaultToolkit();
     private JButton infoBtn;
     private JButton inventoryBtn;
 
@@ -41,6 +40,7 @@ public class WelcomeWindow extends JFrame implements ActionListener {
         this.setSize(icon.getIconWidth(),icon.getIconHeight());
         this.setVisible(true);
 
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
 
         this.setLocation(dimension.width/2 - this.getWidth()/2,dimension.height/2 - this.getHeight()/2);

@@ -11,12 +11,11 @@ import java.awt.*;
 import java.awt.event.*;
 
 public abstract class TableWindow extends JFrame implements ActionListener{
-    private JPanel basePanel;
     private JMenuItem switchMenuItem, exitMenuItem, addMenuItem, refreshMenuItem;
     private JTable table;
     private DefaultTableModel model;
     private JPopupMenu popupMenu;
-    private Toolkit toolkit = Toolkit.getDefaultToolkit();
+
     //method
     protected abstract String[][] getList();
     protected abstract String[] getColumnNames();
@@ -60,7 +59,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
                 return false;
             }
         };
-        this.basePanel = new JPanel();
+        JPanel basePanel = new JPanel();
         basePanel.setLayout(new BorderLayout());
         table = new JTable(this.model);
         table.setFont(new Font("宋体",Font.BOLD,20));
@@ -69,7 +68,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
         right.setHorizontalAlignment(JLabel.CENTER);
         table.setDefaultRenderer(Object.class, right);
         JScrollPane scrollPane = new JScrollPane(table);
-        this.basePanel.add(scrollPane, BorderLayout.CENTER);
+        basePanel.add(scrollPane, BorderLayout.CENTER);
         scrollPane.setViewportView(table);
 
         //setPopMenu
@@ -93,11 +92,12 @@ public abstract class TableWindow extends JFrame implements ActionListener{
         btnPanel.add(currCount);
         //add
         basePanel.add(btnPanel,BorderLayout.SOUTH);
-        this.add(this.basePanel,BorderLayout.CENTER);
+        this.add(basePanel,BorderLayout.CENTER);
 
         this.setBounds(100,100,1000,800);
 
         this.setTitle(getWindowTitle());
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
         this.setIconImage(toolkit.createImage("resource/icon.png"));
         this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         this.addWindowListener(new WindowAdapter() {

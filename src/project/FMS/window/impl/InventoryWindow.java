@@ -1,7 +1,6 @@
 package project.FMS.window.impl;
 
 
-import javafx.scene.control.ComboBox;
 import project.FMS.dao.InfoService;
 import project.FMS.dao.InventoryService;
 import project.FMS.example.Info;
@@ -12,12 +11,12 @@ import project.FMS.window.TableWindow;
 
 import javax.swing.*;
 import java.awt.*;
-import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -54,7 +53,7 @@ public class InventoryWindow extends TableWindow {
             return dataList;
         } catch (Throwable throwable) {
             throwable.printStackTrace();
-            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString());
+            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString(), "错误", JOptionPane.ERROR_MESSAGE);
             return null;
         }
     }
@@ -63,7 +62,9 @@ public class InventoryWindow extends TableWindow {
     protected Boolean delete(String[] row) {
         Integer id = Integer.parseInt(row[0]);
         try {
-            InventoryService.deleteById(id);
+            if(!InventoryService.deleteById(id)){
+                JOptionPane.showMessageDialog(this,"删除失败", "错误", JOptionPane.ERROR_MESSAGE);
+            }
         } catch (Throwable throwable) {
             throwable.printStackTrace();
             return false;
@@ -78,7 +79,7 @@ public class InventoryWindow extends TableWindow {
         title.setFont(new Font("SimHei", Font.BOLD, 15));
 
         JLabel nameLabel = new JLabel("水果：");
-        JComboBox<String> nameComboBox = new JComboBox<String>(this.getFruitList());
+        JComboBox<String> nameComboBox = new JComboBox<>(Objects.requireNonNull(this.getFruitList()));
 
         JLabel timeLabel = new JLabel("批次时间：");
         JSpinner timeSpinner = new JSpinner(new SpinnerDateModel());
@@ -110,7 +111,7 @@ public class InventoryWindow extends TableWindow {
         JTextField supplierField = new JTextField();
 
         JLabel unitLabel = new JLabel("计价单位：");
-        JComboBox<String> unitComboBox = new JComboBox<String>(new String[]{
+        JComboBox<String> unitComboBox = new JComboBox<>(new String[]{
                 "千克", "克", "个", "组"
         });
 
@@ -155,14 +156,14 @@ public class InventoryWindow extends TableWindow {
         Inventory inventory = new Inventory();
         inventory.setBatchNumber(id);
         Matcher matcher = Pattern.compile("^(\\d+)#").matcher((
-                (String)((JComboBox) dialogObjects[3]).getSelectedItem())
+                (String)Objects.requireNonNull(((JComboBox) dialogObjects[3]).getSelectedItem()))
         );
         if (matcher.find())
             inventory.setFruitNumber(Integer.parseInt(matcher.group(1)));
         inventory.setBatchDinout(DateToTimestamp.parse((Date) (((JSpinner)dialogObjects[5]).getValue())));
         inventory.setBatchType(
-                ((JComboBox)dialogObjects[7])
-                    .getSelectedItem().equals("入库")
+                Objects.equals(((JComboBox) dialogObjects[7])
+                        .getSelectedItem(), "入库")
         );
         inventory.setBatchQuantity(Float.parseFloat(
             new DecimalFormat("######0.00").format(
@@ -184,23 +185,23 @@ public class InventoryWindow extends TableWindow {
     protected Boolean add(Object[] dialogObjects) throws Throwable {
         Inventory inventory = new Inventory();
         Matcher matcher = Pattern.compile("^(\\d+)#").matcher((
-                (String)((JComboBox) dialogObjects[3]).getSelectedItem())
+                (String)Objects.requireNonNull(((JComboBox) dialogObjects[3]).getSelectedItem()))
         );
         if (matcher.find())
             inventory.setFruitNumber(Integer.parseInt(matcher.group(1)));
         inventory.setBatchDinout(DateToTimestamp.parse((Date) (((JSpinner)dialogObjects[5]).getValue())));
         inventory.setBatchType(
-                ((JComboBox)dialogObjects[7])
-                        .getSelectedItem().equals("入库")
+                Objects.equals(((JComboBox) dialogObjects[7])
+                        .getSelectedItem(), "入库")
         );
         inventory.setBatchQuantity(Float.parseFloat(
                 new DecimalFormat("######0.00").format(
-                        (Double)(((JSpinner)dialogObjects[9]).getValue())
+                        ((JSpinner)dialogObjects[9]).getValue()
                 )
         ));
         inventory.setBatchPrice(Float.parseFloat(
                 new DecimalFormat("######0.00").format(
-                        (Double)(((JSpinner)dialogObjects[11]).getValue())
+                        ((JSpinner)dialogObjects[11]).getValue()
                 )
         ));
         inventory.setBatchSupplier(((JTextField)dialogObjects[13]).getText());
@@ -218,7 +219,7 @@ public class InventoryWindow extends TableWindow {
             return result.getFruitName();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
-            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString());
+            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString(), "错误", JOptionPane.ERROR_MESSAGE);
             return null;
         }
     }
@@ -227,13 +228,11 @@ public class InventoryWindow extends TableWindow {
         try {
             List<Info> list = InfoService.getList();
             String[] dataList = new String[list.size()];
-            Iterables.forEach(list,(index, item)->{
-                        dataList[index] =item.getFruitNumber() + "#" + item.getFruitName();
-            });
+            Iterables.forEach(list,(index, item)-> dataList[index] =item.getFruitNumber() + "#" + item.getFruitName());
             return dataList;
         } catch (Throwable throwable) {
             throwable.printStackTrace();
-            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString());
+            JOptionPane.showMessageDialog(this,"数据获取失败，错误详情：\n" + throwable.toString(), "错误", JOptionPane.ERROR_MESSAGE);
             return null;
         }
     }
