@@ -1,6 +1,7 @@
 package project.FMS.dao;
 
 import java.io.FileInputStream;
+import java.net.ConnectException;
 import java.sql.*;
 import java.util.*;
 
@@ -34,14 +35,13 @@ class DAO {
         }
     }
 
-    private Boolean conn(){
+    private Boolean conn() throws Throwable {
         try{
             Class.forName(driver);
             conn = DriverManager.getConnection(url,user,pass);
             stmt = conn.createStatement();
         } catch(Exception e){
-            e.printStackTrace();
-            return false;
+            throw new Throwable("Database connect error" ,e);
         }
 
         return true;
@@ -58,7 +58,7 @@ class DAO {
 
     }
 
-    List<Object> select(String sql){
+    List<Object> select(String sql) throws Throwable {
         List<Object> list = new ArrayList<>();
         if(this.conn()){
             try{
@@ -87,7 +87,7 @@ class DAO {
         return list;
     }
 
-    int operate(String sql){
+    int operate(String sql) throws Throwable {
         if(this.conn()){
             try{
                 return stmt.executeUpdate(sql);
@@ -116,7 +116,7 @@ class DAO {
         }
     }
 
-    int runSet(PreparedStatement set){
+    int runSet(PreparedStatement set) throws Throwable {
         if(this.conn()){
             try{
                 return set.executeUpdate();

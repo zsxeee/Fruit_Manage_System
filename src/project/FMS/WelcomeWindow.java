@@ -1,8 +1,8 @@
 package project.FMS;
 
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
-import project.FMS.window.InfoWindow;
-import project.FMS.window.InventoryWindow;
+import project.FMS.window.impl.InfoWindow;
+import project.FMS.window.impl.InventoryWindow;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -71,10 +71,12 @@ public class WelcomeWindow extends JFrame implements ActionListener {
         if(e.getSource() == this.infoBtn){
             JFrame frame = new InfoWindow();
             frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            this.dispose();
         }
         if (e.getSource() == this.inventoryBtn){
             JFrame frame = new InventoryWindow();
             frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            this.dispose();
         }
     }
 }

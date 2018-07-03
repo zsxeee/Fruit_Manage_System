@@ -56,7 +56,7 @@ public class InventoryService {
 
     public static Boolean deleteById(Integer id) throws Throwable {
         DAO dao = new DAO();
-        Integer result = dao.operate("DELETE FROM `fruitinventory` WHERE `fruitinventory`.`FruitNumber` = "+ id);
+        Integer result = dao.operate("DELETE FROM `fruitinventory` WHERE `fruitinventory`.`BatchNumber` = "+ id);
         return result != 0;
     }
 }

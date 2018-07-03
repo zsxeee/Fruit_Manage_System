@@ -11,19 +11,18 @@ import java.awt.*;
 import java.awt.event.*;
 
 public abstract class TableWindow extends JFrame implements ActionListener{
-    JPanel basePanel;
-    JMenuItem switchMenuItem, exitMenuItem, addMenuItem, refreshMenuItem;
-    JTable table;
-    DefaultTableModel model;
-    JScrollPane scrollPane;
-    JPopupMenu popupMenu;
-    Toolkit toolkit = Toolkit.getDefaultToolkit();
+    private JPanel basePanel;
+    private JMenuItem switchMenuItem, exitMenuItem, addMenuItem, refreshMenuItem;
+    private JTable table;
+    private DefaultTableModel model;
+    private JPopupMenu popupMenu;
+    private Toolkit toolkit = Toolkit.getDefaultToolkit();
     //method
-    abstract String[][] getList();
-    abstract String[] getColumnNames();
-    abstract String getWindowTitle();
+    protected abstract String[][] getList();
+    protected abstract String[] getColumnNames();
+    protected abstract String getWindowTitle();
 
-    TableWindow(){
+    protected TableWindow(){
         IconFontSwing.register(FontAwesome.getIconFont());
         //setMenu
         JMenuBar menuBar = new JMenuBar();
@@ -63,15 +62,14 @@ public abstract class TableWindow extends JFrame implements ActionListener{
         };
         this.basePanel = new JPanel();
         basePanel.setLayout(new BorderLayout());
-        this.basePanel.setBounds(0, 0, this.getWidth(), this.getHeight());
         table = new JTable(this.model);
         table.setFont(new Font("宋体",Font.BOLD,20));
         table.setRowHeight(30);
         DefaultTableCellRenderer right = new DefaultTableCellRenderer();
         right.setHorizontalAlignment(JLabel.CENTER);
         table.setDefaultRenderer(Object.class, right);
-        this.scrollPane = new JScrollPane(table);
-        this.basePanel.add(this.scrollPane, BorderLayout.CENTER);
+        JScrollPane scrollPane = new JScrollPane(table);
+        this.basePanel.add(scrollPane, BorderLayout.CENTER);
         scrollPane.setViewportView(table);
 
         //setPopMenu
@@ -126,7 +124,28 @@ public abstract class TableWindow extends JFrame implements ActionListener{
             }
         }
         else if (e.getSource() == this.addMenuItem){
-            new JOptionPane();
+            Object[] dialogObjects = getDialogField();
+
+            int result = JOptionPane.showConfirmDialog(
+                    this,
+                    dialogObjects,
+                    "新增条目",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.PLAIN_MESSAGE
+            );
+            if (result == JOptionPane.YES_OPTION){
+                try {
+                    if(!add(dialogObjects)){
+                        JOptionPane.showMessageDialog(this, "保存失败！", "错误", JOptionPane.ERROR_MESSAGE);
+                    }
+                } catch (Throwable throwable) {
+                    JOptionPane.showMessageDialog(this, "保存失败！", "错误", JOptionPane.ERROR_MESSAGE);
+                    throwable.printStackTrace();
+                }finally {
+                    model.setDataVector(getList(),getColumnNames());
+                    model.fireTableDataChanged();
+                }
+            }
         }
         else if (e.getSource() == this.refreshMenuItem){
             model.setDataVector(this.getList(),getColumnNames());
@@ -134,7 +153,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
         }
     }
 
-    void createPopupMenu() {
+    private void createPopupMenu() {
         Component frame = this;
         popupMenu = new JPopupMenu();
 
@@ -142,26 +161,61 @@ public abstract class TableWindow extends JFrame implements ActionListener{
         editMenItem.setText("  编辑  ");
         Icon editIcon = IconFontSwing.buildIcon(FontAwesome.PENCIL, 16, Color.BLACK);
         editMenItem.setIcon(editIcon);
-        editMenItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //该操作需要做的事
+        editMenItem.addActionListener(evt -> {
+            Integer rowIndex = table.getSelectedRow();
+            String [] row = getList()[rowIndex];
+
+            Object[] dialogObjects = getDialogField();
+            setDialogData(dialogObjects, row);
+
+            int result = JOptionPane.showConfirmDialog(
+                frame,
+                    dialogObjects,
+                "编辑条目",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.PLAIN_MESSAGE
+            );
+            if (result == JOptionPane.YES_OPTION){
+                try {
+                    if(!save(Integer.parseInt(row[0]), dialogObjects)){
+                        JOptionPane.showMessageDialog(frame, "保存失败！", "错误", JOptionPane.ERROR_MESSAGE);
+                    }
+                } catch (Throwable throwable) {
+                    JOptionPane.showMessageDialog(frame, "保存失败！", "错误", JOptionPane.ERROR_MESSAGE);
+                    throwable.printStackTrace();
+                }finally {
+                    model.setDataVector(getList(),getColumnNames());
+                    model.fireTableDataChanged();
+                }
             }
         });
         JMenuItem delMenItem = new JMenuItem();
         delMenItem.setText("  删除  ");
         Icon delIcon = IconFontSwing.buildIcon(FontAwesome.TRASH, 16, Color.BLACK);
         delMenItem.setIcon(delIcon);
-        delMenItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                if(JOptionPane.showConfirmDialog(frame,"确认删除此行？","警告", JOptionPane.YES_NO_OPTION)==0){
-                    System.out.println(evt);
+        delMenItem.addActionListener(evt -> {
+            if(JOptionPane.showConfirmDialog(frame,"确认删除此行？","警告", JOptionPane.YES_NO_OPTION)==0){
+                Integer rowIndex = table.getSelectedRow();
+                String [] row = getList()[rowIndex];
+                if (delete(row)){
+                    model.setDataVector(getList(),getColumnNames());
+                    model.fireTableDataChanged();
+                }else {
+                    JOptionPane.showMessageDialog(frame, "删除失败！", "错误", JOptionPane.ERROR_MESSAGE);
                 }
-
             }
+
         });
 
         popupMenu.add(editMenItem);
         popupMenu.add(delMenItem);
     }
+
+    protected abstract Boolean delete(String[] row);
+    protected abstract Object[] getDialogField();
+    protected abstract void setDialogData(Object[] field, String[] row);
+
+    protected abstract Boolean save(Integer id, Object[] dialogObjects) throws Throwable;
+    protected abstract Boolean add(Object[] dialogObjects) throws Throwable;
 }
 
