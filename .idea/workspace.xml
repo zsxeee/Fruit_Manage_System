@@ -6,22 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209dd951-9edc-4e01-a211-0c4f3ff9305b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/dao/InventoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/example/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/example/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/TableWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/impl/InfoWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/impl/InfoWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/impl/InventoryWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fruit_Manage_System/project/FMS/window/impl/InventoryWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/window/TableWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/FMS/window/TableWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/FMS/window/impl/InventoryWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/FMS/window/impl/InventoryWindow.java" afterDir="false" />
-    </list>
+    <list default="true" id="209dd951-9edc-4e01-a211-0c4f3ff9305b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,29 +38,7 @@
     <favorites_list name="Fruit Manage System" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InventoryWindow.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/project/FMS/window/impl/InventoryWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InventoryService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,8 +68,8 @@
       <find>JOption</find>
       <find>Object</find>
       <find>getList</find>
-      <find>unit</find>
       <find>数量</find>
+      <find>unit</find>
     </findStrings>
     <replaceStrings>
       <replace>Inventory</replace>
@@ -152,7 +115,6 @@
         <option value="$PROJECT_DIR$/test/project/FMS/dao/DAOTest.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/util/DateToTimestamp.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/dao/DAO.java" />
-        <option value="$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/example/Info.java" />
         <option value="$PROJECT_DIR$/test/project/FMS/dao/InfoServiceTest.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/window/impl/InfoWindow.java" />
@@ -161,6 +123,7 @@
         <option value="$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java" />
         <option value="$PROJECT_DIR$/src/project/FMS/window/impl/InventoryWindow.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java" />
       </list>
     </option>
   </component>
@@ -416,7 +379,7 @@
       <workItem from="1530598472324" duration="13130000" />
       <workItem from="1530621999499" duration="722000" />
       <workItem from="1530664063089" duration="8610000" />
-      <workItem from="1530694843044" duration="2552000" />
+      <workItem from="1530694843044" duration="3167000" />
     </task>
     <servers />
   </component>
@@ -453,11 +416,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141995000" />
+    <option name="totallyTimeSpent" value="142610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="13" />
@@ -469,7 +431,7 @@
       <window_info anchor="right" id="Maven Projects" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49932975" visible="true" weight="0.32248938" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49932975" visible="true" weight="0.32107496" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.32956153" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
@@ -540,7 +502,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource.properties" />
     <entry file="file://$PROJECT_DIR$/.classpath" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/jsse.jar!/com/sun/net/ssl/internal/ssl/Provider.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -722,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/FMS/util/Iterables.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -773,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -790,13 +737,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/javax/swing/LayoutComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/WelcomeWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/FMS/window/impl/InventoryWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/FMS/dao/InventoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>

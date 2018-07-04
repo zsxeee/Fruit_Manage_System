@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="resource"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mysql-connector-java-8.0.11"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JUnit4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jiconfont-1.0.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/beautyeye_lnf"/>
+	<classpathentry kind="output" path="out/production/Fruit_Manage_System"/>
+</classpath>
