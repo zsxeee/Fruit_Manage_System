@@ -30,27 +30,25 @@ public class InventoryService {
 
     public static Boolean addByExample(Inventory inventory) throws Throwable {
         DAO dao = new DAO();
-        PreparedStatement set = dao.preSet("INSERT INTO `fruitinventory` (`BatchNumber`, `FruitNumber`, `BatchDinout`, `BatchType`, `BatchQuantity`, `BatchPrice`, `BatchSupplier`, `BatchUnit`) VALUES (NULL, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?, ?)");
+        PreparedStatement set = dao.preSet("INSERT INTO `fruitinventory` (`BatchNumber`, `FruitNumber`, `BatchDinout`, `BatchType`, `BatchQuantity`, `BatchPrice`, `BatchSupplier`) VALUES (NULL, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?)");
         set.setInt(1, inventory.getFruitNumber());
         set.setBoolean(2,inventory.getBatchType());
         set.setFloat(3,inventory.getBatchQuantity());
         set.setFloat(4,inventory.getBatchPrice());
         set.setString(5,inventory.getBatchSupplier());
-        set.setString(6,inventory.getBatchUnit());
         return dao.runSet(set) != 0;
     }
 
     public static Boolean updateByExample(Inventory inventory) throws Throwable {
         DAO dao = new DAO();
-        PreparedStatement set = dao.preSet("UPDATE `fruitinventory` SET `FruitNumber` = ?, `BatchDinout` = ?, `BatchType` = ?, `BatchQuantity` = ?, `BatchPrice` = ?, `BatchSupplier` = ?, `BatchUnit` = ? WHERE `fruitinventory`.`BatchNumber` = ?");
+        PreparedStatement set = dao.preSet("UPDATE `fruitinventory` SET `FruitNumber` = ?, `BatchDinout` = ?, `BatchType` = ?, `BatchQuantity` = ?, `BatchPrice` = ?, `BatchSupplier` = ? WHERE `fruitinventory`.`BatchNumber` = ?");
         set.setInt(1, inventory.getFruitNumber());
         set.setTimestamp(2,inventory.getBatchDinout());
         set.setBoolean(3, inventory.getBatchType());
         set.setFloat(4,inventory.getBatchQuantity());
         set.setFloat(5,inventory.getBatchPrice());
         set.setString(6,inventory.getBatchSupplier());
-        set.setString(7,inventory.getBatchUnit());
-        set.setInt(8,inventory.getBatchNumber());
+        set.setInt(7,inventory.getBatchNumber());
         return dao.runSet(set) != 0;
     }
 

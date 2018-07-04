@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 public class InventoryWindow extends TableWindow {
     @Override
     protected String[] getColumnNames() {
-        return new String[]{"批次编号", "水果", "批次时间", "批次类型", "批次水果数量", "批次单价", "批次供应商", "批次计价单位", "批次总价"};
+        return new String[]{"批次编号", "水果", "批次时间", "批次类型", "批次水果数量(kg)", "批次单价", "批次供应商", "批次总价"};
     }
 
     @Override
@@ -55,7 +55,6 @@ public class InventoryWindow extends TableWindow {
                         item.getBatchQuantity().toString(),
                         item.getBatchPrice().toString(),
                         item.getBatchSupplier(),
-                        item.getBatchUnit(),
                         String.valueOf(new DecimalFormat("#.00").format(item.getBatchPrice() * item.getBatchQuantity()))
                 };
                 dataList[index] = temp;
@@ -101,7 +100,7 @@ public class InventoryWindow extends TableWindow {
         JLabel typeNumLabel = new JLabel("批次类型：");
         JComboBox<String> typeComboBox = new JComboBox<>(new String[]{"入库", "出库"});
 
-        JLabel fruitNumLabel = new JLabel("水果数量：");
+        JLabel fruitNumLabel = new JLabel("水果数量(kg)：");
         JSpinner fruitNumSpinner = new JSpinner(new SpinnerNumberModel(
                 0,
                 0,
@@ -120,11 +119,6 @@ public class InventoryWindow extends TableWindow {
         JLabel supplierLabel = new JLabel("供应商：");
         JTextField supplierField = new JTextField();
 
-        JLabel unitLabel = new JLabel("计价单位：");
-        JComboBox<String> unitComboBox = new JComboBox<>(new String[]{
-                "千克", "克", "个", "组"
-        });
-
         return new Object[]{
                 title,
                 Box.createVerticalStrut(8),
@@ -140,8 +134,6 @@ public class InventoryWindow extends TableWindow {
                 priceSpinner,
                 supplierLabel,
                 supplierField,
-                unitLabel,
-                unitComboBox,
                 Box.createVerticalStrut(20)
         };
     }
@@ -158,7 +150,6 @@ public class InventoryWindow extends TableWindow {
         ((JSpinner)field[9]).setValue(Float.parseFloat(row[4]));
         ((JSpinner)field[11]).setValue(Float.parseFloat(row[5]));
         ((JTextField)field[13]).setText(row[6]);
-        ((JComboBox)field[15]).setSelectedItem(row[7]);
     }
 
     @Override
@@ -186,7 +177,6 @@ public class InventoryWindow extends TableWindow {
             )
         ));
         inventory.setBatchSupplier(((JTextField)dialogObjects[13]).getText());
-        inventory.setBatchUnit((String)(((JComboBox)dialogObjects[15]).getSelectedItem()));
 
         return InventoryService.updateByExample(inventory);
     }
@@ -215,7 +205,6 @@ public class InventoryWindow extends TableWindow {
                 )
         ));
         inventory.setBatchSupplier(((JTextField)dialogObjects[13]).getText());
-        inventory.setBatchUnit((String)(((JComboBox)dialogObjects[15]).getSelectedItem()));
 
         return InventoryService.addByExample(inventory);
     }
@@ -236,7 +225,7 @@ public class InventoryWindow extends TableWindow {
 
     private String[] getFruitList(){
         try {
-            List<Info> list = InfoService.getList(this.currPageCount, this.per);
+            List<Info> list = InfoService.getList(1, Math.toIntExact(InfoService.countList()));
             String[] dataList = new String[list.size()];
             Iterables.forEach(list,(index, item)-> dataList[index] =item.getFruitNumber() + "#" + item.getFruitName());
             return dataList;

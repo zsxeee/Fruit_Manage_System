@@ -63,7 +63,7 @@ public class WelcomeWindow extends JFrame implements ActionListener {
         {
             exception.printStackTrace();
         }
-        new WelcomeWindow();
+        SwingUtilities.invokeLater(WelcomeWindow::new);
     }
 
     @Override

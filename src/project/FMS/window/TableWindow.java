@@ -19,6 +19,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
     private Long total = this.getTotalCount();
     protected Integer per = 30;
     private Integer page = Math.toIntExact(this.total / this.per)+1;
+    private JLabel currCount;
 
     public void setCurrPageCount(Integer currPageCount) {
         this.currPageCount = currPageCount;
@@ -26,6 +27,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
 
         this.model.setDataVector(getList(),getColumnNames());
         this.model.fireTableDataChanged();
+        this.currCount.setText("当前显示记录数："+ this.model.getRowCount());
     }
 
     private JComboBox<Integer> pageSelect;
@@ -104,7 +106,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
         //setBtn
         JPanel btnPanel = new JPanel();
         JLabel totalCount = new JLabel("总记录数："+ total.toString());
-        JLabel currCount = new JLabel("当前显示记录数："+ this.model.getRowCount());
+        this.currCount = new JLabel("当前显示记录数："+ this.model.getRowCount());
         JLabel perCount = new JLabel("每页显示记录数："+ per);
         JButton prevPage = new JButton("上一页");
         prevPage.addActionListener(evt->{
