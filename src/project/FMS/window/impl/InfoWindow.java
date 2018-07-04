@@ -16,7 +16,7 @@ public class InfoWindow extends TableWindow {
 
     @Override
     protected String[] getColumnNames() {
-        return new String[]{"水果编号", "水果名称", "水果产地"};
+        return new String[]{"水果编号", "水果名称", "水果产地", "在记库存数量"};
     }
 
     @Override
@@ -25,16 +25,26 @@ public class InfoWindow extends TableWindow {
     }
 
     @Override
+    protected Long getTotalCount() {
+        try {
+            return InfoService.countList();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+            return 0L;
+        }
+    }
+
+    @Override
     protected String[][] getList(){
         try {
-            List<Info> list = InfoService.getList();
+            List<Info> list = InfoService.getList(this.currPageCount, this.per);
             String[][] dataList = new String[list.size()][];
             Iterables.forEach(list,(index, item)->{
                 String[] temp = new String[]{
                         item.getFruitNumber().toString(),
                         item.getFruitName(),
-                        item.getFruitProduction()
-
+                        item.getFruitProduction(),
+                        item.getTotal()==null?"0":item.getTotal().toString()
                 };
                 dataList[index] = temp;
             });

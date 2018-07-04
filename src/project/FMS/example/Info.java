@@ -7,6 +7,7 @@ public class Info {
         this.FruitNumber = (Integer) map.get("FruitNumber");
         this.FruitName = (String) map.get("FruitName");
         this.FruitProduction = (String) map.get("FruitProduction");
+        this.total = (Double) map.get("total");
     }
 
     public Info(){}
@@ -14,6 +15,7 @@ public class Info {
     private Integer FruitNumber;
     private String FruitName;
     private String FruitProduction;
+    private Double total;
 
     public Integer getFruitNumber() {
         return FruitNumber;
@@ -37,5 +39,9 @@ public class Info {
 
     public void setFruitProduction(String fruitProduction) {
         FruitProduction = fruitProduction;
+    }
+
+    public Double getTotal() {
+        return total;
     }
 }

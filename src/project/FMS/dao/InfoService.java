@@ -8,9 +8,10 @@ import java.util.List;
 import java.util.Map;
 
 public class InfoService {
-    public static List<Info> getList() throws Throwable {
+    public static List<Info> getList(Integer page, Integer perPage) throws Throwable {
         DAO dao = new DAO();
-        List result = dao.select("SELECT * FROM `FruitInfo`");
+        page = (page -1)*perPage;
+        List result = dao.select("SELECT`fruitinfo`.*,SUM(IF(`fruitinventory`.`BatchType`,`fruitinventory`.`BatchQuantity`, - `fruitinventory`.`BatchQuantity`)) `total` FROM `fruitinfo` LEFT JOIN `fruitinventory` ON `fruitinfo`.`FruitNumber` = `fruitinventory`.`FruitNumber` GROUP BY `fruitinfo`.`FruitNumber` LIMIT "+page+", "+perPage);
         List<Info> list = new ArrayList<>();
         result.forEach((Object item)->{
             list.add(new Info((Map)item));
@@ -48,5 +49,11 @@ public class InfoService {
         DAO dao = new DAO();
         Integer result = dao.operate("DELETE FROM `fruitinfo` WHERE `fruitinfo`.`FruitNumber` = "+ id);
         return result != 0;
+    }
+
+    public static Long countList() throws Throwable{
+        DAO dao = new DAO();
+        Map result = (Map) dao.select("SELECT COUNT(*) `count` FROM `fruitinfo`").get(0);
+        return (Long) result.get("count");
     }
 }

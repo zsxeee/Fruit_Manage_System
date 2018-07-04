@@ -32,9 +32,19 @@ public class InventoryWindow extends TableWindow {
     }
 
     @Override
+    protected Long getTotalCount(){
+        try {
+            return InventoryService.countList();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+            return 0L;
+        }
+    }
+
+    @Override
     protected String[][] getList(){
         try {
-            List<Inventory> list = InventoryService.getList();
+            List<Inventory> list = InventoryService.getList(this.currPageCount, this.per);
             String[][] dataList = new String[list.size()][];
             Iterables.forEach(list,(index, item)->{
                 String[] temp = new String[]{
@@ -226,7 +236,7 @@ public class InventoryWindow extends TableWindow {
 
     private String[] getFruitList(){
         try {
-            List<Info> list = InfoService.getList();
+            List<Info> list = InfoService.getList(this.currPageCount, this.per);
             String[] dataList = new String[list.size()];
             Iterables.forEach(list,(index, item)-> dataList[index] =item.getFruitNumber() + "#" + item.getFruitName());
             return dataList;

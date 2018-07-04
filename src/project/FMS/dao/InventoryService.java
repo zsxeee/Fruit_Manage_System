@@ -8,9 +8,10 @@ import java.util.List;
 import java.util.Map;
 
 public class InventoryService {
-    public static List<Inventory> getList() throws Throwable {
+    public static List<Inventory> getList(Integer page, Integer perPage) throws Throwable {
         DAO dao = new DAO();
-        List result = dao.select("SELECT * FROM `FruitInventory`");
+        page = (page -1)*perPage;
+        List result = dao.select("SELECT * FROM `FruitInventory` LIMIT "+page+", "+perPage);
         List<Inventory> list = new ArrayList<>();
         result.forEach((Object item)->{
             list.add(new Inventory((Map)item));
@@ -57,5 +58,11 @@ public class InventoryService {
         DAO dao = new DAO();
         Integer result = dao.operate("DELETE FROM `fruitinventory` WHERE `fruitinventory`.`BatchNumber` = "+ id);
         return result != 0;
+    }
+
+    public static Long countList() throws Throwable{
+        DAO dao = new DAO();
+        Map result = (Map) dao.select("SELECT COUNT(*) `count` FROM `fruitinventory`").get(0);
+        return (Long) result.get("count");
     }
 }

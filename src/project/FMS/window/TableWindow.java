@@ -15,11 +15,26 @@ public abstract class TableWindow extends JFrame implements ActionListener{
     private JTable table;
     private DefaultTableModel model;
     private JPopupMenu popupMenu;
+    protected Integer currPageCount = 1;
+    private Long total = this.getTotalCount();
+    protected Integer per = 30;
+    private Integer page = Math.toIntExact(this.total / this.per)+1;
+
+    public void setCurrPageCount(Integer currPageCount) {
+        this.currPageCount = currPageCount;
+        this.pageSelect.setSelectedItem(currPageCount);
+
+        this.model.setDataVector(getList(),getColumnNames());
+        this.model.fireTableDataChanged();
+    }
+
+    private JComboBox<Integer> pageSelect;
 
     //method
     protected abstract String[][] getList();
     protected abstract String[] getColumnNames();
     protected abstract String getWindowTitle();
+    protected abstract Long getTotalCount();
 
     protected TableWindow(){
         IconFontSwing.register(FontAwesome.getIconFont());
@@ -88,8 +103,43 @@ public abstract class TableWindow extends JFrame implements ActionListener{
 
         //setBtn
         JPanel btnPanel = new JPanel();
-        JLabel currCount = new JLabel("当前显示记录数："+this.model.getRowCount());
+        JLabel totalCount = new JLabel("总记录数："+ total.toString());
+        JLabel currCount = new JLabel("当前显示记录数："+ this.model.getRowCount());
+        JLabel perCount = new JLabel("每页显示记录数："+ per);
+        JButton prevPage = new JButton("上一页");
+        prevPage.addActionListener(evt->{
+            if(currPageCount != 1){
+                this.setCurrPageCount(currPageCount -1);
+            }
+        });
+        Integer[] pageArray = new Integer[page];
+        for (Integer i=page;i>0;i--){
+            pageArray[i-1] = i;
+        }
+        this.pageSelect = new JComboBox<>(pageArray);
+        this.pageSelect.setSelectedItem(currPageCount);
+        this.pageSelect.addActionListener(evt->{
+            this.setCurrPageCount((Integer) pageSelect.getSelectedItem());
+        });
+        JButton nextPage = new JButton("下一页");
+        nextPage.addActionListener(evt->{
+            if(!currPageCount.equals(page)){
+                this.setCurrPageCount(currPageCount +1);
+            }
+        });
+
+        btnPanel.add(totalCount);
+        btnPanel.add(Box.createHorizontalStrut(10));
         btnPanel.add(currCount);
+        btnPanel.add(Box.createHorizontalStrut(10));
+        btnPanel.add(perCount);
+        btnPanel.add(Box.createHorizontalStrut(10));
+        btnPanel.add(prevPage);
+        btnPanel.add(Box.createHorizontalStrut(10));
+        btnPanel.add(pageSelect);
+        btnPanel.add(Box.createHorizontalStrut(10));
+        btnPanel.add(nextPage);
+
         //add
         basePanel.add(btnPanel,BorderLayout.SOUTH);
         this.add(basePanel,BorderLayout.CENTER);
