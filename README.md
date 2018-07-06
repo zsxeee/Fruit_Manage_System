@@ -44,5 +44,5 @@ CREATE TABLE `fms`.`FruitInfo` ( `FruitNumber` INT(3) NOT NULL AUTO_INCREMENT CO
 ```
 
 ```sql
-CREATE TABLE `fms`.`FruitInventory` ( `BatchNumber` INT(5) NOT NULL AUTO_INCREMENT COMMENT '批次编号' , `FruitNumber` INT(3) NOT NULL COMMENT '水果的编号' , `BatchDinout` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '水果库存变动时间' , `BatchType` BIT(1) NOT NULL COMMENT '批次变动类型' , `BatchQuantity` FLOAT(4,2) NOT NULL COMMENT '本批次水果的数量(kg)' , `BatchPrice` FLOAT(2,2) NOT NULL COMMENT '当前批次单价' , `BatchSupplier` VARCHAR(10) NOT NULL COMMENT '本批次水果供应商' , PRIMARY KEY (`BatchNumber`),FOREIGN KEY (`FruitNumber`) REFERENCES `fms`.`FruitInfo`(`FruitNumber`)) ENGINE = MyISAM;
+CREATE TABLE `fms`.`FruitInventory` ( `BatchNumber` INT(5) NOT NULL AUTO_INCREMENT COMMENT '批次编号' , `FruitNumber` INT(3) NOT NULL COMMENT '水果的编号' , `BatchDinout` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '水果库存变动时间' , `BatchType` BIT(1) NOT NULL COMMENT '批次变动类型' , `BatchQuantity` FLOAT(6,2) NOT NULL COMMENT '本批次水果的数量(kg)' , `BatchPrice` FLOAT(4,2) NOT NULL COMMENT '当前批次单价' , `BatchSupplier` VARCHAR(10) NOT NULL COMMENT '本批次水果供应商' , PRIMARY KEY (`BatchNumber`),FOREIGN KEY (`FruitNumber`) REFERENCES `fms`.`FruitInfo`(`FruitNumber`)) ENGINE = MyISAM;
 ```

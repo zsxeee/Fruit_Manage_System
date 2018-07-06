@@ -21,7 +21,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
     private Integer page = Math.toIntExact(this.total / this.per)+1;
     private JLabel currCount;
 
-    public void setCurrPageCount(Integer currPageCount) {
+    private void setCurrPageCount(Integer currPageCount) {
         this.currPageCount = currPageCount;
         this.pageSelect.setSelectedItem(currPageCount);
 
@@ -120,9 +120,7 @@ public abstract class TableWindow extends JFrame implements ActionListener{
         }
         this.pageSelect = new JComboBox<>(pageArray);
         this.pageSelect.setSelectedItem(currPageCount);
-        this.pageSelect.addActionListener(evt->{
-            this.setCurrPageCount((Integer) pageSelect.getSelectedItem());
-        });
+        this.pageSelect.addActionListener(evt-> this.setCurrPageCount((Integer) pageSelect.getSelectedItem()));
         JButton nextPage = new JButton("下一页");
         nextPage.addActionListener(evt->{
             if(!currPageCount.equals(page)){
